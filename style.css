@@ -1,0 +1,53 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.full_width_centered_container {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height: 100vh;
+    width: 170vh;
+
+}
+
+.loader-container {
+    width: 100px;
+    height: 100px;
+    animation: roter linear 1s infinite;
+
+   
+} 
+.cir{
+       stroke: rgba(255,0,106);
+       fill: transparent;
+       stroke-width: 5px;
+       stroke-dasharray: 250;
+       stroke-linecap:round;
+       stroke-dashoffset: 250;
+       animation: animer linear 2s infinite 
+    }
+
+@keyframes roter{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360%)
+    }
+}
+
+@keyframes animer{
+    0%,100%{
+        stroke-dashoffset: 250;
+    }
+    50%{
+        stroke-dashoffset:0;
+    }
+    50.1%{
+        stroke-dashoffset:500
+    }
+}
